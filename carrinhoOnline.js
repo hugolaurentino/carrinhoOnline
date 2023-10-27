@@ -53,11 +53,15 @@ roberto.carrinho = [
 
 console.log(`
 Olá ${pessoa.nome}, suas compras foram: `);
-for (let index = 0; index < pessoa.carrinho.length; index++) {
-    console.log('Quantidade:', pessoa.carrinho[index].quantidade,
-        pessoa.carrinho[index].item.nome,
-        ', valor:', pessoa.carrinho[index].item.valorEmCentavos
-    )
+// for (let index = 0; index < pessoa.carrinho.length; index++) {
+//     console.log('Quantidade:', pessoa.carrinho[index].quantidade,
+//         pessoa.carrinho[index].item.nome,
+//         ', valor:', pessoa.carrinho[index].item.valorEmCentavos
+//     )
+// }
+for (const carrinho of pessoa.carrinho) {
+    console.log('Quantidade:', carrinho.quantidade,
+        carrinho.item.nome,
+        ', valor:', carrinho.item.valorEmCentavos)
 }
-
 console.log();
